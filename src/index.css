@@ -1,26 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+  --color-background: #022f40;
+  --color-foreground: #eaf7ff;
 
-  --color-card: #141a1f;
+  --color-card: #183446;
 
-  --color-primary: #20b2a6;
+  --color-primary: #0090c1;
   --color-primary-foreground: #ffffff;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+  --color-secondary: #046e8f;
+  --color-secondary-foreground: #eaf7ff;
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+  --color-muted: #21495f;
+  --color-muted-foreground: #9cc9d9;
 
-  --color-border: #242b32;
+  --color-border: #21495f;
 
   --radius: 0.75rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+  --color-highlight: #38aecc;
+  --color-accent: #38aecc;
+
+  --color-surface: #183446;
 }
 
 @layer base {
@@ -45,7 +47,7 @@
 
 @layer components {
   .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    background-color: color-mix(in srgb, var(--color-surface) 55%, transparent);
     backdrop-filter: blur(16px);
     border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
   }
@@ -58,13 +60,13 @@
 
   .glow-text {
     text-shadow: 0 0 30px
-      color-mix(in srgb, var(--color-primary) 50%, transparent);
+      color-mix(in srgb, var(--color-highlight) 60%, transparent);
   }
 
   .glow-border {
     box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
+        color-mix(in srgb, var(--color-highlight) 25%, transparent),
+      inset 0 0 20px color-mix(in srgb, var(--color-highlight) 10%, transparent);
   }
 }
 
@@ -83,38 +85,15 @@
   }
 
   @keyframes slow-drift {
-    0%,
-    100% {
-      transform: translate(0, 0);
-    }
-    25% {
-      transform: translate(20px, -30px);
-    }
-    50% {
-      transform: translate(-15px, -20px);
-    }
-    75% {
-      transform: translate(30px, 10px);
-    }
+    0%,100% { transform: translate(0,0); }
+    25% { transform: translate(20px,-30px); }
+    50% { transform: translate(-15px,-20px); }
+    75% { transform: translate(30px,10px); }
   }
 
   @keyframes float {
-    0%,
-    100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-
-  @keyframes marquee {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 
   .animate-fade-in {
@@ -125,60 +104,9 @@
     animation: float 4s ease-in-out infinite;
   }
 
-  .animate-marquee {
-    animation: marquee 30s linear infinite;
-  }
-
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
-
-  .animation-delay-500 {
-    animation-delay: 500ms;
-  }
-
-  .animation-delay-600 {
-    animation-delay: 600ms;
-  }
-
-  .animation-delay-800 {
-    animation-delay: 800ms;
-  }
-
-  @keyframes animated-border {
-    0% {
-      stroke-dashoffset: 400;
-    }
-    100% {
-      stroke-dashoffset: -550;
-    }
-  }
-
-  .group:hover .animated-border-path {
-    animation: animated-border 1.5s linear infinite;
-  }
-
-  .animated-border:hover {
-    background-color: color-mix(in srgb, #26c4b8 15%, transparent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 0 20px color-mix(in srgb, #26c4b8 20%, transparent);
-  }
-
-  .timeline-glow {
-    box-shadow: 0 0 40px
-        color-mix(in srgb, var(--color-primary) 35%, transparent),
-      0 0 80px color-mix(in srgb, var(--color-primary) 25%, transparent);
-  }
+  .animation-delay-100 { animation-delay:100ms; }
+  .animation-delay-200 { animation-delay:200ms; }
+  .animation-delay-300 { animation-delay:300ms; }
+  .animation-delay-400 { animation-delay:400ms; }
+  .animation-delay-500 { animation-delay:500ms; }
 }

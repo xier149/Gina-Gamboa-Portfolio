@@ -24,6 +24,48 @@ export const Certifications = () => {
       image: "/certificates/cer03.png",
       link: "https://drive.google.com/file/d/1bzQ8VL1ivPZAC8lUXk33e5_DQqE2Rk9-/view?usp=sharing",
     },
+    {
+      title: "Troubleshooting and Debugging Techniques",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer04.png",
+      link: "https://drive.google.com/file/d/1zaoog0YV9mQTA4mdPTjAZiI98xO-gAWY/view?usp=sharing",
+    },
+    {
+      title: "Foundation of Project Management",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer05.png",
+      link: "https://drive.google.com/file/d/1hHDp7ZgOcKyL22RSP0aOqRRyU0oEUDZu/view?usp=sharing",
+    },
+    {
+      title: "Project Planning",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer06.png",
+      link: "https://drive.google.com/file/d/1AgMTsEdxZ4tHLcIzus8OmWVKyt12kv6-/view?usp=sharing",
+    },
+    {
+      title: "Design User Experience",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer07.png",
+      link: "https://drive.google.com/file/d/1iW2trQt_WpvDVBTVjru51ivq_sAwDlnT/view?usp=sharing",
+    },
+    {
+      title: "Build Wireframes and Prototypes",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer08.png",
+      link: "https://drive.google.com/file/d/17CSKwYf8W0kfrnIL29FAgrQt0rTYmya3/view?usp=sharing",
+    },
+    {
+      title: "Conduct UX Research",
+      issuer: "Coursera",
+      date: "2026",
+      image: "/certificates/cer09.png",
+      link: "https://drive.google.com/file/d/19qTOOuMyhR7vOBY1CIg13en5CCLnjmyb/view?usp=sharing",
+    },
   ];
 
   return (
